@@ -1,0 +1,99 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --ink: #e5e7eb;
+  --accent: #22d3ee;
+  --muted: #94a3b8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 20% 20%, #1d4ed8 0%, #0f172a 45%, #020617 100%);
+  color: var(--ink);
+  font-family: "Segoe UI", "Noto Sans JP", sans-serif;
+}
+
+.layout {
+  width: min(980px, 96vw);
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+.game-area {
+  background: rgba(2, 6, 23, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+}
+
+#board {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 2;
+  border: 2px solid rgba(148, 163, 184, 0.4);
+  border-radius: 10px;
+  background: #020617;
+  display: block;
+}
+
+#status {
+  margin: 10px 0 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.panel {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.controls ul {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  #board {
+    margin-inline: auto;
+  }
+}
